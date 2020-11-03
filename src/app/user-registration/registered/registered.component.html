@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<h3>Registered Users</h3>
+<table>
+
+
+  <tr>
+    <th>FirstName</th>
+    <th>LastName</th>
+    
+     <th>Gender</th>
+    <th>Mobile</th>
+     <th>Email</th>
+  </tr>
+
+
+
+
+
+  <tr *ngFor="let obj of model">
+     <td>{{obj.firstname}}</td>
+     <td>{{obj.lastname}}</td> 
+     <td>{{obj.gender}}</td>
+     <td>{{obj.mobile}}</td>
+     <td>{{obj.email}}</td>   
+    
+  </tr>
+
+</table>
+
+ <app-footer></app-footer>

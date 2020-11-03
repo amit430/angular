@@ -1,0 +1,12 @@
+.error{
+    color: orangered
+}
+
+
+
+.register-class{
+    align-content: flex-end;
+    border: 7px #ccc solid  !important;
+    padding: 15px !important;
+     
+}

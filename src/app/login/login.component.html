@@ -1,0 +1,16 @@
+<h3>LOGIN FORM</h3>
+
+<form #Form = "ngForm"(ngSubmit)="onSubmit(Form.value)">
+  <div class="login-class">
+  <app-header></app-header>
+  UserName : <br><input required #username = "ngModel" placeholder="Enter Username"minlength="5" maxlength="8" type="username" username ngModel name="username" ngModel > <br>
+ <span *ngIf="username.invalid && username.touched "  class="error"> Invalid UserName </span> <br>
+  
+  Password:<br> <input required #password ="ngModel" placeholder="Enter Password" minlength="5" maxlength="8" type="password" name="password"ngModel>  <br>
+  <span *ngIf="password.invalid && password.touched" class ="error"> Password is not valid</span><br>
+  
+
+  
+  <button  [disabled]="Form.invalid"  type="submit"> Login</button>
+  <app-footer></app-footer>
+  </div>

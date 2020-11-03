@@ -1,0 +1,40 @@
+<h3>REGISTRATION FORM</h3>
+ 
+<form #Register = "ngForm"(ngSubmit)="onRegister(Register.value)">
+  
+   <div class="register-class">
+       <app-header></app-header>
+  FirstName : <input required #firstName = "ngModel" placeholder="Enter FirstName" type="firstName" firstName ngModel name="firstName" ngModel > <br>
+ <span *ngIf="firstName.invalid && firstName.touched "  class="error"> FirstName Required </span> <br>
+  
+  LastName: <input required #lastName ="ngModel" placeholder="Enter LastName" type="lastName" name="lastName"ngModel>  <br>
+  <span *ngIf="lastName.invalid && lastName.touched" class ="error"> LastName Required</span><br>
+  
+   <!--Gender: <input required #gender ="ngModel" type="gender" name="gender"ngModel>  <br>
+  <span *ngIf="gender.invalid && gender.touched" class ="error"> Gender Required</span><br>-->
+  
+     Gender: <select name required #gender ="ngModel" type="gender" name="gender"ngModel>  <br>
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Teenager">Teenager</option>
+                       
+                    </select>
+   <span *ngIf="gender.invalid && gender.touched" class ="error"> Gender Required</span><br><br>
+  
+   Mobile: <input required #mobile ="ngModel"placeholder="Enter Mobile" minlength="10" maxlength="10" itemtype="int" type="mobile" name="mobile"ngModel>  <br>
+  <span *ngIf="mobile.invalid && mobile.touched" class ="error"> Please Enter Valid Mobile Number</span><br>
+   <!--<span *ngIf="mobile.pattern" class ="error"> Pattern is not correct</span><br>-->
+
+   
+   
+      Email: <input required #email = "ngModel" placeholder="Enter Email" type="email" email ngModel name="email" ngModel > <br>
+ <span *ngIf="email.invalid && email.touched "  class="error"> Please Enter Valid email Address </span> <br>
+ 
+  <button [disabled]="Register.invalid"  type="submit"> Register</button>
+
+  
+
+   <app-footer></app-footer>
+ </div>
+ 
