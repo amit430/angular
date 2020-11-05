@@ -44,14 +44,7 @@ onRegister(register){
    console.log(register.gender);
     console.log(register.mobile);
      console.log(register.email);
-this.model=[
-  // {firstname :  register.firstname,
-  //   lastname : register.lastName,
-  //   gender : register.gender,
-  //   mobile: register.mobile,
-  //   email: register.email
-  
-    
+this.model=[    
   { firstname : localStorage.getItem('firstname'),
     lastname : localStorage.getItem('lastname'),
     gender : localStorage.getItem('gender'),

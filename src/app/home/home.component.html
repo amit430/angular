@@ -1,7 +1,20 @@
-<p>HomePage</p>
-<a [routerLink]="['/contactUs']">ContactUS</a>  <br>
+<h3>HomePage</h3>
+ <app-header></app-header>
+<!--<a [routerLink]="['/contactUs']">ContactUS</a>  <br>
 <a [routerLink]="['/aboutUs']">AboutUS</a><br>
 <a [routerLink]="['/logout']">Logout</a><br>
-<a [routerLink]="['../registered']">Registered Users</a>
+<a [routerLink]="['../registered']">Registered Users</a>-->
 
 
+<ul>
+   <li><a [routerLink]="['../registered']">Registered Users</a></li>
+   <li><a [routerLink]="['/aboutUs']">AboutUS</a></li>
+  <li><a [routerLink]="['/contactUs']">ContactUS</a></li>
+ <li><a [routerLink]="['/logout']">Logout</a></li>
+
+</ul>
+<br>
+<br>
+<br>
+
+<app-footer></app-footer>
